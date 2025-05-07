@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopSphere - Your Indian Mega Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+
+    nav.scrolled {
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #e74c3c;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #e74c3c;
+    }
+
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('https://static.vecteezy.com/system/resources/thumbnails/048/912/237/small_2x/portrait-of-excited-happy-woman-holding-shopping-bags-and-showing-plastic-credit-card-smiling-amazed-standing-against-pink-background-photo.jpg') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 200px 10% 100px;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .cta-btn {
+      padding: 15px 30px;
+      background: #e74c3c;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #c0392b;
+    }
+
+    section {
+      padding: 60px 10%;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .category, .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+    
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      max-width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #777;
+      font-size: 0.95rem;
+    }
+
+    .price {
+      color: #e74c3c;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 40px 10%;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav {
+        padding: 15px 5%;
+      }
+    }
+    @keyframes swipeUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.swipe-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: swipeUp 0.8s ease-out forwards;
+}
+.animate {
+  animation: swipeUp 0.8s ease-out forwards;
+}
+
+
+    
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="logo">ShopSphere</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#clothing">Clothing</a></li>
+      <li><a href="#electronics">Electronics</a></li>
+      <li><a href="#offers">Offers</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Welcome to ShopSphere</h1>
+    <p>Your One-Stop Online Store for Everything You Need!</p>
+    <button class="cta-btn">Shop Now</button>
+  </header>
+
+  <section id="clothing">
+    <h2>Latest Indian Fashion</h2>
+    <div class="category">
+      <div class="card">
+        <img src="https://asopalav.b-cdn.net/media/catalog/product/p/s/psafi1577b-yellow-tussar-art-silk-saree-with-floral-thread-embroidery.jpg?class=1x" alt="Saree" />
+        <h3>Traditional Sarees</h3>
+        <p>Upto 40% Off</p>
+        <p class="price">₹999</p>
+      </div>
+      <div class="card">
+        <img src="https://assets2.andaazfashion.com/media/catalog/product/cache/1/image/800x1200/a12781a7f2ccb3d663f7fd01e1bd2e4e/n/a/navy-blue-silk-mens-kurta-pajama-with-embroidered-jacket-mkpa06613-1.jpg" alt="Kurta" />
+        <h3>Men's Kurtas</h3>
+        <p>Festive Collection</p>
+        <p class="price">₹899</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="electronics">
+    <h2>Trending Electronics</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Smartphone" />
+        <h3>Smartphones</h3>
+        <p>Starting ₹6999</p>
+        <p class="price">₹7,499</p>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Laptop" />
+        <h3>Laptops</h3>
+        <p>Best for Work & Gaming</p>
+        <p class="price">₹44,999</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="offers">
+    <h2>Today's Top Deals</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Shoes" />
+        <h3>Running Shoes</h3>
+        <p>50% Off</p>
+        <p class="price">₹1,199</p>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Watch" />
+        <h3>Wrist Watches</h3>
+        <p>Stylish & Affordable</p>
+        <p class="price">₹1,499</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>© 2025 ShopSphere. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+    const elements = document.querySelectorAll('.swipe-up');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+elements.forEach(el => {
+  observer.observe(el);
+});
+
+  </script>
+
+</body>
+</html>
